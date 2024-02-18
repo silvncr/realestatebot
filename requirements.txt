@@ -1,7 +1,7 @@
 about-time==4.2.1
 alive-progress==3.1.5
 certifi==2024.2.2
-charset-normalizer==3.3.0
+charset-normalizer==3.3.2
 grapheme==0.6.0
 idna==3.6
 numpy==1.26.4

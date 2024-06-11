@@ -1,11 +1,21 @@
 # realestatebot
 
-uses [`realestate-data`](https://github.com/storerjeremy/realestate-data) to gather listings from the [realestate.com.au](https://realestate.com.au) "api" (not really an api, but it works)
+tool for ripping Australian real estate listings
 
-> notes:
->
-> - no "token" is required as it basically rips from the website
-> - deviating too far from the examples counts as misuse, and may cause unpredicatable behaviour
+![version](https://img.shields.io/pypi/v/realestatebot)
+![status](https://img.shields.io/github/actions/workflow/status/silvncr/realestatebot/python-publish.yml)
+![downloads](https://img.shields.io/pypi/dm/realestatebot)
+
+![license](https://img.shields.io/github/license/silvncr/realestatebot)
+![python](https://img.shields.io/pypi/pyversions/realestatebot)
+
+## summary
+
+uses [`realestate-data`](https://github.com/storerjeremy/realestate-data) to rip listings from [realestate.com.au](https://realestate.com.au)
+
+this module has not been properly tested, and as such, deviating too far from the examples counts as misuse, and may cause unpredicatable behaviour
+
+i made this for personal use, and i'm sharing it in case someone else finds it useful
 
 ## setup
 
@@ -58,8 +68,8 @@ from realestatebot import main
 with open(os_path.join(sys_path[0], 'out.json'), 'w') as file:
     dump(main(
 
-        postcodes   = [2600],
-        states      = ['ACT'],
+        postcodes   = {2600},
+        states      = {'ACT'},
         target      = (35.5222, 149.0808),
         price_range = (10_000, 10_000_000),
 

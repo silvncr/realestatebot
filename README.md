@@ -26,15 +26,21 @@ git clone https://github.com/silvncr/realestatebot.git
 `.env` (example)
 
 ```sh
-    # comma-separated lists; no spaces; make sure to set these up
+    # comma-separated lists; no spaces; required
 
-postcodes="2600,2601,2602"         # main search parameter
-states="ACT,NSW,VIC,QLD,NT,SA,TAS"  # WA is not supported (not sure why)
+POSTCODES="2600,2601,2602"         # main search parameter; more can be added
+STATES="ACT,NSW,VIC,QLD,NT,SA,TAS"  # WA is not supported (not sure why)
 
-    # target location (for distance calculations); not required, can be left empty
+    # target location (for distance calculations); not required, can be omitted
 
-target_lat=35.5222  # latitude
-target_lon=149.0808  # longitude
+# idk where this is btw
+TARGET_LAT=-35.308056  # latitude (in decimal degrees north)
+TARGET_LON=149.124444  # longitude (in decimal degrees east)
+
+    # price range (in AUD); not required, can be omitted; defaults shown below
+
+PRICE_MIN=10000    # minimum price; not validated in-app; can be zero
+PRICE_MAX=10000000  # maximum price; not validated in-app
 ```
 
 ## run

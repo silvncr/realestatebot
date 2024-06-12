@@ -27,7 +27,7 @@ setup(
 		'pandas==2.2.0',
 		'python-dotenv==1.0.1',
 		'realestate-data==0.1.0',
-		'requests==2.31.0',
+		'requests==2.32.3',
 	],
 	setup_requires=['pytest_runner'],
 	python_requires=f'>={__python_version__}',

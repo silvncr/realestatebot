@@ -24,7 +24,7 @@ setup(
 	package_data={},
 	install_requires=[
 		'alive-progress==3.1.5',
-		'pandas==2.0.3',
+		'pandas==2.2.2',
 		'python-dotenv==1.0.1',
 		'realestate-data==0.1.0',
 		'requests==2.32.3',

@@ -10,7 +10,6 @@ from os import getenv
 from os import path as os_path
 from re import findall, search, sub
 from sys import path as sys_path
-from typing import Optional
 
 from alive_progress import alive_bar
 from dotenv import find_dotenv, load_dotenv
@@ -23,7 +22,6 @@ from requests.exceptions import ConnectionError
 __author__ = 'silvncr'
 __license__ = 'MIT'
 __module_name__ = 'realestatebot'
-__python_version__ = '3.8'
 __version__ = '0.0.2'
 
 

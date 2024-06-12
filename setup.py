@@ -5,7 +5,6 @@ from realestatebot import (
 	__doc__,
 	__license__,
 	__module_name__,
-	__python_version__,
 	__version__,
 )
 from setuptools import setup
@@ -30,7 +29,7 @@ setup(
 		'requests==2.32.3',
 	],
 	setup_requires=['pytest_runner'],
-	python_requires=f'>={__python_version__}',
+	python_requires='>=3.8',
 	scripts=[],
 	tests_require=['pytest'],
 	entry_points={},

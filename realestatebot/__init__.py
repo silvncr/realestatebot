@@ -23,8 +23,8 @@ from requests.exceptions import ConnectionError
 __author__ = 'silvncr'
 __license__ = 'MIT'
 __module_name__ = 'realestatebot'
-__python_version__ = '3.12'
-__version__ = '0.0.1'
+__python_version__ = '3.8'
+__version__ = '0.0.2'
 
 
 # modes
@@ -68,7 +68,7 @@ def format_listings(r: list[dict]) -> list[dict | None]:
 	'Formats search results into a list of dictionaries.'
 
 	# format to list
-	listings = list[Optional[dict]]([])
+	listings: list[dict | None] = []
 	for page in r:
 		for tier in page['tieredResults']:
 			for result in tier['results']:
@@ -331,13 +331,13 @@ def main(
 			title='Searching..',
 			title_length=12,
 		) as bar:
-			for postcode, _ in product(postcodes, states):
+			for _postcode, _ in product(postcodes, states):
 				call_succeeded = False
 				i = 0
 				while not call_succeeded:
 					try:
 						try:
-							_search.localities[0].postcode = int(postcode)  # type: ignore[]
+							_search.localities[0].postcode = int(_postcode)  # type: ignore[]
 						except ValueError:
 							break
 						_search.localities[0].state = Locality.SUBDIVISION_QLD  # type: ignore[]
@@ -378,7 +378,7 @@ def main(
 				if listing.get('address', {}).get('streetAddress') is not None
 				else None
 			) or None
-			postcode = (
+			_postcode = (
 				listing.get('address', {}).get('postcode')
 				or listing.get('address', {}).get('postCode')
 			) or None
@@ -444,7 +444,7 @@ def main(
 					[
 						{
 							'address': address,
-							'postcode': postcode,
+							'postcode': _postcode,
 							'bedrooms': bedrooms,
 							'bathrooms': bathrooms,
 							'parking': parking,
@@ -487,7 +487,7 @@ if __name__ == '__main__':
 
 	# run main function
 	data, raw = main(
-		set[str](list(POSTCODES)[: (number_of_postcodes or len(POSTCODES))]),
+		set(list(POSTCODES)[: (number_of_postcodes or len(POSTCODES))]),
 		STATES,
 		(PRICE_LOW, PRICE_HIGH),
 		(TARGET_LAT, TARGET_LON),

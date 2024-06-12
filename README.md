@@ -98,6 +98,7 @@ print('\ndone')
 | output formats    |   x   |        |          |
 | performance       |       |   x    |          |
 | reliability       |   x   |        |          |
+| requirements      |   x   |        |          |
 | search parameters |   x   |        |          |
 | security          |       |   x    |          |
 | tests             |   x   |        |          |

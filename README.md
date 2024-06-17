@@ -7,7 +7,11 @@ tool for ripping Australian real estate listings
 ![downloads](https://img.shields.io/pypi/dm/realestatebot)
 
 ![license](https://img.shields.io/github/license/silvncr/realestatebot)
-![python](https://img.shields.io/pypi/pyversions/realestatebot)
+![format](https://img.shields.io/pypi/format/realestatebot)
+![pyversions](https://img.shields.io/pypi/pyversions/realestatebot)
+
+![repo-size](https://img.shields.io/github/repo-size/silvncr/realestatebot)
+![code-size](https://img.shields.io/github/languages/code-size/silvncr/realestatebot)
 
 ## summary
 
@@ -72,14 +76,16 @@ from sys  import path as sys_path
 from realestatebot import main
 
 with open(os_path.join(sys_path[0], 'out.json'), 'w') as file:
-    dump(main(
+    dump(
+        main(
 
-        postcodes   = {2600},
-        states      = {'ACT'},
-        target      = (35.5222, 149.0808),
-        price_range = (10_000, 10_000_000),
+            postcodes   = {2600},
+            states      = {'ACT'},
+            target      = (-35.308056, 149.124444),
+            price_range = (10_000, 10_000_000),
 
-    )[0].to_dict(orient="records"), file, indent=4)
+        )[0].to_dict(orient="records"), file, indent=4
+    )
 
 print('\ndone')
 ```

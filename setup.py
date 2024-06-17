@@ -1,25 +1,19 @@
 from pathlib import Path
 
-from realestatebot import (
-	__author__,
-	__doc__,
-	__license__,
-	__module_name__,
-	__version__,
-)
+from realestatebot import __author__, __doc__, __license__, __module__, __version__
 from setuptools import setup
 
 setup(
-	name=__module_name__,
+	name=__module__,
 	version=__version__,
 	description=__doc__,
 	long_description=Path('README.md').read_text(),
 	long_description_content_type='text/markdown',
-	url=f'https://github.com/{__author__}/{__module_name__}',
+	url=f'https://github.com/{__author__}/{__module__}',
 	author=__author__,
 	include_package_data=True,
 	license=__license__,
-	packages=[__module_name__],
+	packages=[__module__],
 	package_data={},
 	install_requires=[
 		'alive-progress==3.1.5',

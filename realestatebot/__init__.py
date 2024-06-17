@@ -18,10 +18,9 @@ from realestate_data.schematics import Filters, Locality, PriceRange, Search
 from realestate_data.utils import paged_results
 from requests.exceptions import ConnectionError
 
-# metadata
 __author__ = 'silvncr'
 __license__ = 'MIT'
-__module_name__ = 'realestatebot'
+__module__ = 'realestatebot'
 __version__ = '0.0.2'
 
 

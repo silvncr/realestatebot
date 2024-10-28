@@ -16,7 +16,7 @@ setup(
 	packages=[__module__],
 	package_data={},
 	install_requires=[
-		'alive-progress==3.1.5',
+		'alive-progress==3.2.0',
 		'pandas==2.2.3',
 		'python-dotenv==1.0.1',
 		'realestate-data==0.1.0',
